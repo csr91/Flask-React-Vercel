@@ -1,25 +1,15 @@
 {
     "version": 2,
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/backend/$1",
-        "methods": ["GET"]
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/frontend/$1"
-      }
+    "builds": [
+      { "src": "frontend/package.json", "use": "@vercel/node", "config": { "preBuild": "npm --prefix frontend run build" } },
+      { "src": "backend/*", "use": "@vercel/python" }
     ],
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "/backend/$1"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/frontend/$1"
-      }
-    ]
+    "routes": [
+      { "src": "/api/(.*)", "dest": "backend/api/$1" },
+      { "src": "/(.*)", "dest": "frontend/$1" }
+    ],
+    "env": {
+      "API_URL": "/api"
+    }
   }
   
