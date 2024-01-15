@@ -1,15 +1,9 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "frontend/package.json", "use": "@vercel/node", "config": { "preBuild": "npm --prefix frontend run build" } },
-      { "src": "backend/*", "use": "@vercel/python" }
-    ],
-    "routes": [
-      { "src": "/api/(.*)", "dest": "backend/api/$1" },
-      { "src": "/(.*)", "dest": "frontend/$1" }
-    ],
-    "env": {
-      "API_URL": "/api"
-    }
-  }
-  
+  "version": 2,
+  "builds": [
+    { "src": "frontend/package.json", "use": "@vercel/node", "config": { "production": true } }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "frontend/$1" }
+  ]
+}
