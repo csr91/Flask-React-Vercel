@@ -55,3 +55,8 @@ La API de flask es muy simple, contiene varias URLs para consultar respuesta hac
 
 El front es solo el app.js de react, con un fetch a /API para chequear en la consola la respuesta
 
+https://pruebabckfr.vercel.app/
+https://pruebabckfr.vercel.app/api
+https://pruebabckfr.vercel.app/api/hello
+https://pruebabckfr.vercel.app/api/otroarchivo
+https://pruebabckfr.vercel.app/rct
