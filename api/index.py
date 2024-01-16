@@ -1,4 +1,3 @@
-# backend/app.py
 from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
@@ -7,6 +6,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/api/hello')
+@app.route('/api')
 def hello():
     return jsonify(message="Hellooo from Flask!")
