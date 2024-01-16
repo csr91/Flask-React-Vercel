@@ -11,5 +11,5 @@ def hello():
     return jsonify(message="Hellooo from Flask!")
 
 @app.route('/api/hello')
-def hello():
+def hello1():
     return jsonify(message="Hellooo from Flask api hello!")
