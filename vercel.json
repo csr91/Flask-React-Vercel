@@ -1,6 +1,15 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/api/$1" }
+    "functions": {
+      "api/app.py": {
+        "memory": 1024,
+        "maxDuration": 10
+      }
+    },
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/api/app.py"
+      }
     ]
-}
+  }
   
