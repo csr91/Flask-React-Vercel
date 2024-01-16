@@ -9,3 +9,7 @@ def index():
 @app.route('/api')
 def hello():
     return jsonify(message="Hellooo from Flask!")
+
+@app.route('/api/hello')
+def hello():
+    return jsonify(message="Hellooo from Flask api hello!")
