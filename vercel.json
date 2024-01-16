@@ -1,6 +1,10 @@
 {
+  "env": {
+    "PYTHONPATH": "api/"
+  },
     "functions": {
       "api/index.py": {
+        "includeFiles": "api/**",
         "memory": 1024,
         "maxDuration": 10
       }
