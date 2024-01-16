@@ -6,10 +6,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/api')
+@app.route('/apis')
 def hello():
-    return jsonify(message="Hellooo from Flask!")
-
-@app.route('/api/hello')
-def helloo():
-    return jsonify(message="Hellooo from Flask api hello!")
+    return jsonify(message="Hell from Flask!")
