@@ -18,6 +18,6 @@ def hellu():
     return jsonify(message="Hello from Flask from api helllooo!!!")
 
 # Nueva ruta para /otroarchivo
-@app.route('/otroarchivo')
+@app.route('/api/otroarchivo')
 def otro_archivo():
     return hola_desde_otro_archivo()
